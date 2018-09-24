@@ -12,7 +12,8 @@ class App extends Component {
             query: '',
             data: '',
             accessToken: '',
-            artist: null
+            artist: null,
+            tracks: []
         }
     }
 
@@ -38,7 +39,15 @@ class App extends Component {
               let artist = json.artists.items[0];
               this.setState({artist});
 
-              FETCH_URL = `${ALBUM_URL}/${artist.id}/top-tracks?country=US&`;
+              FETCH_URL = `${ALBUM_URL}${artist.id}/top-tracks?country=US&`;
+
+              fetch(FETCH_URL, myOptions)
+                .then(response => response.json())
+                .then(json => {
+                    console.log('artists top tracks:', json);
+                    const tracks = json.tracks;
+                    this.setState({tracks});
+                })
           })
       }
 
