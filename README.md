@@ -1,5 +1,5 @@
 # Richard's Spotify Music Player
-This is a custom designed web app that allows users to play music using Spotify's API
+This is a react app built to allow users to play their favorite music using Spotify's API in a nice UI.
 
 ## Build Setup
 
@@ -29,5 +29,5 @@ node server.js
 http://localhost:8888/login
 ```
 
-## How oAuth works in this project
-> Make sure to follow build setup properly.  After you have the front end server and express server running in seperate terminals, you start by going to http://localhost:8888/login.  This express server will then hit a Spotify's authorization backend that has an understanding with Spotify's API.  Then Spotify will use our Redirect URI to hit our express server which will in turn send us back to our front-end at localhost:3000 with a temporary token in the URL thanks to our client id/ secret id.  Then our app will have full functionality thanks to this temporary token allowing us to retrieve JSON from Spotify's API.
+## How our web app works with Spotify's Authentication process
+> Make sure to follow build setup properly.  After you have the front end server and express server running in seperate terminals, you start by going to http://localhost:8888/login.  This express server will then hit a Spotify's authorization backend that has an understanding with Spotify's API.  Then Spotify will use our Redirect URI to hit our express server which will in turn send us back to our front-end at localhost:3000 with a temporary token in the URL thanks to our client id/ secret id.  Then our app will have full functionality thanks to this temporary token allowing us to fetch JSON data from Spotify's API.
