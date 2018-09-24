@@ -7,18 +7,37 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            query: ''
+            query: '',
+            data: '',
+            accessToken: ''
         }
     }
 
     search() {
-        console.log('this.state', this.state);
-    }
+        console.log('this.state', this.state);        
+        const BASE_URL = 'https://api.spotify.com/v1/search?';
+        const FETCH_URL = BASE_URL + 'q=' + this.state.query + '&type=artist&limit=1';    
+        var accessToken = this.state.accessToken;
+    
+        var myOptions = {
+          method: 'GET',
+          headers:  {
+            'Authorization': 'Bearer ' + accessToken
+         },
+          mode: 'cors',
+          cache: 'default'
+        };
+    
+        fetch(FETCH_URL, myOptions )
+          .then(response => response.json())
+          .then(json => console.log(json))
+      }
 
     componentDidMount() {
         let parsed = queryString.parse(window.location.search);
         let accessToken = parsed.access_token;
         console.log(accessToken);
+        this.setState({accessToken: accessToken});
     }
 
     render () {
