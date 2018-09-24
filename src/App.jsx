@@ -9,7 +9,8 @@ class App extends Component {
         this.state = {
             query: '',
             data: '',
-            accessToken: ''
+            accessToken: '',
+            artist: null
         }
     }
 
@@ -30,7 +31,12 @@ class App extends Component {
     
         fetch(FETCH_URL, myOptions )
           .then(response => response.json())
-          .then(json => console.log(json))
+          .then(json => {
+              console.log('json', json);
+              const artist = json.artists.items[0].name;
+              console.log('artist', artist);
+              this.setState({artist});
+          })
       }
 
     componentDidMount() {
