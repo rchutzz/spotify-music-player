@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
+import queryString from 'query-string';
 
 class App extends Component {
     constructor(props) {
@@ -12,6 +13,12 @@ class App extends Component {
 
     search() {
         console.log('this.state', this.state);
+    }
+
+    componentDidMount() {
+        let parsed = queryString.parse(window.location.search);
+        let accessToken = parsed.access_token;
+        console.log(accessToken);
     }
 
     render () {
@@ -26,7 +33,7 @@ class App extends Component {
                             value={this.state.query}
                             onChange={event => {this.setState({query: event.target.value})}}
                             onKeyPress={event => {
-                                if (event.key == 'Enter') {
+                                if (event.key === 'Enter') {
                                     this.search();
                                 }
                             }}
