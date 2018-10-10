@@ -61,7 +61,13 @@ class App extends Component {
     render () {
         return (
             <div className="App">
-                <div className="App-title">Richard's Spotify Music Player</div>
+            <div class="intro">
+                <p class="script"><span>Welcome to Richard's</span></p>
+                <p class="shadow text1">SPOTIFY</p>
+                <p class="shadow text2">MUSIC</p>
+                <p class="shadow text3">PLAYER</p>
+                <p class="script"></p>
+            </div>
                 <FormGroup>
                     <InputGroup>
                         <FormControl
