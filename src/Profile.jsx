@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Profile extends Component {
+
+  numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  
   render() {
     let artist = {
       name: '',
@@ -22,8 +27,9 @@ class Profile extends Component {
         />
         <div className="profile_info">
           <div className="profile_name">{artist.name}</div>
+          <p class="script"></p>
           <div className="profile_followers">
-            {artist.followers.total} followers
+            {this.numberWithCommas(artist.followers.total)} followers
           </div>
           <div className="profile_genres">
             {

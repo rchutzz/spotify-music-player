@@ -97,11 +97,17 @@ body {
 }
 
 .profile_name {
-    font-size: 26px;
+    font-size: 40px;
+    font-family: "Seaweed Script";
 }
 
 .profile_followers, .profile_genres {
     font-size: 18px;
+    padding-top: 5px;
+}
+
+.profile_followers {
+  color: white;
 }
 
 /*Gallery*/
