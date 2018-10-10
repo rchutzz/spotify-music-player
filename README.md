@@ -33,6 +33,6 @@ http://localhost:8888/login
 ![alt text](images/fullscreen-example.png)
 ![alt text](images/minimized-example.png)
 
-## How our web app works with Spotify's Authentication process
+## How the web app works with Spotify's Authentication process
 > Make sure to follow build setup properly.  After you have the front end server and express server running in seperate terminals, you start by going to http://localhost:8888/login.  This express server will then hit a Spotify's authorization backend that has an understanding with Spotify's API.  Then Spotify will use our Redirect URI to hit our express server which will in turn send us back to our front-end at localhost:3000 with a temporary token in the URL thanks to our client id/ secret id.  Then our app will have full functionality thanks to this temporary token allowing us to fetch JSON data from Spotify's API.
 
