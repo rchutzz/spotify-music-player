@@ -5,6 +5,7 @@ body {
     background: #1a1a1d;
     background-color: #222;
     color: #c3073f;
+    font-family: Arvo;
 }
 
 .App {
@@ -92,6 +93,7 @@ body {
     height: 150px;
     border-radius: 10%;
     object-fit: cover;
+    border: 3px solid #fff;
 }
 
 .profile_name {
