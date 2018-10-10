@@ -61,16 +61,17 @@ class App extends Component {
     render () {
         return (
             <div className="App">
-            <div class="intro">
-                <p class="script"><span>Welcome to Richard's</span></p>
-                <p class="shadow text1">SPOTIFY</p>
-                <p class="shadow text2">MUSIC</p>
-                <p class="shadow text3">PLAYER</p>
-                <p class="script"></p>
+            <div className="intro">
+                <p className="script"><span>Welcome to Richard's</span></p>
+                <p className="shadow text1">SPOTIFY</p>
+                <p className="shadow text2">MUSIC</p>
+                <p className="shadow text3">PLAYER</p>
+                <p className="script"></p>
             </div>
                 <FormGroup>
                     <InputGroup>
                         <FormControl
+                            className="searchBar"
                             type="text"
                             placeholder="Search for an artist"
                             value={this.state.query}
