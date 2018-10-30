@@ -1,7 +1,10 @@
 # Richard's Spotify Music Player
-This is a react app built to allow users to play their favorite music using Spotify's API through the oAuth 2.0 process.  You can visit the app at https://richard-spotify-backend.herokuapp.com/login which will re-direct you to https://richard-spotify-music-player.herokuapp.com/ with the authorization token in the URL to play any song you'd like in Spotify's database.
+This is a react app built to allow users to play their favorite music using Spotify's API through the oAuth 2.0 process.  
 
-## Build Setup
+# Visit deployed app
+You can visit the app at https://richard-spotify-backend.herokuapp.com/login which will re-direct you to https://richard-spotify-music-player.herokuapp.com/ with the authorization token in the URL to play any song you'd like in Spotify's database.
+
+## Build Setup for development mode
 
 ``` bash
 # Install dependencies from root directory
